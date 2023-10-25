@@ -112,6 +112,14 @@ brew install docker-completion
 brew install docker-compose-completion
 brew install docker-machine-completion
 
+# Install Logitech Options
+printf ">\tInstalling Logitech Options\n"
+brew install --cask logi-options-plus
+
+# Install VPN
+printf ">\tInstalling VPN\n"
+brew install --cask protonvpn
+
 
 # reload profile items
 {
