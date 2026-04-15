@@ -43,6 +43,7 @@ brew install oh-my-posh
 # Install iTerm2
 printf ">\tInstalling terminal tools\n"
 brew install --cask iterm2
+brew install --cask ghostty
 
 # Install command line tools
 printf ">\tInstalling CLI tools\n"
