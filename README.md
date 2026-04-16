@@ -30,3 +30,20 @@ The script will:
 6. Generate an SSH key and print the public key to add to GitHub
 
 After it finishes, restart Terminal.
+
+## Resetting an existing Mac
+
+To converge an already-configured Mac back to the desired state (update all packages, fix missing tools, reset `.zshrc`):
+
+```sh
+bash src/reset.sh
+```
+
+The reset script will:
+1. Run `brew update`, `brew upgrade`, and `brew cleanup` (full system upgrade)
+2. Install any declared packages/casks that are missing
+3. Skip SSH key generation if any `~/.ssh/id_*` key already exists
+4. Overwrite `~/.zshrc` with the template and append folder aliases from `src/aliases.sh`
+5. Ensure alias target folders exist (e.g. `~/Documents/Projects`)
+6. Reapply macOS defaults (dock, key repeat, Finder hidden files, screenshot shadow)
+7. Prompt for git name/email only if not already configured
